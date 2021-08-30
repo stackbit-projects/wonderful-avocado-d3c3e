@@ -1,0 +1,238 @@
+stackbitVersion: ~0.3.0
+ssgName: hugo
+publishDir: public
+dataDir: data
+pagesDir: content
+assets:
+  referenceType: static
+  staticDir: static
+  uploadDir: assets
+  publicPath: /
+models:
+  principles:
+    type: data
+    label: Principles
+    file: principles.json
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: markdown
+        name: description
+        label: Description
+      - type: list
+        name: authors
+        label: Authors
+        items:
+          type: string
+      - type: list
+        name: principles
+        label: Principles
+        items:
+          type: object
+          fields:
+            - type: string
+              name: title
+              label: Title
+            - type: string
+              name: strapline
+              label: Strapline
+            - type: string
+              name: description
+              label: Description
+            - type: list
+              name: examples
+              label: Examples
+              items:
+                type: object
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: description
+                    label: Description
+  wcag:
+    type: data
+    label: Wcag
+    file: wcag.json
+    isList: true
+    items:
+      type: model
+      models:
+        - object_zs6s13repr
+        - object_v1mr7fzal9
+        - object_8dqnwqzcn9
+        - object_km2x5pmlwq
+  object_zs6s13repr:
+    type: object
+    label: Object 1
+    fields:
+      - type: string
+        name: ref_id
+        label: Ref Id
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: description
+        label: Description
+      - type: string
+        name: url
+        label: Url
+      - type: string
+        name: level
+        label: Level
+      - type: list
+        name: special_cases
+        label: Special Cases
+        items:
+          type: object
+          fields:
+            - type: string
+              name: type
+              label: Type
+            - type: string
+              name: title
+              label: Title
+            - type: string
+              name: description
+              label: Description
+      - type: list
+        name: references
+        label: References
+        items:
+          type: object
+          fields:
+            - type: string
+              name: title
+              label: Title
+            - type: string
+              name: url
+              label: Url
+  object_v1mr7fzal9:
+    type: object
+    label: Object 2
+    fields:
+      - type: string
+        name: ref_id
+        label: Ref Id
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: description
+        label: Description
+      - type: string
+        name: url
+        label: Url
+      - type: string
+        name: level
+        label: Level
+      - type: list
+        name: references
+        label: References
+        items:
+          type: object
+          fields:
+            - type: string
+              name: title
+              label: Title
+            - type: string
+              name: url
+              label: Url
+  object_8dqnwqzcn9:
+    type: object
+    label: Object 3
+    fields:
+      - type: string
+        name: ref_id
+        label: Ref Id
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: description
+        label: Description
+      - type: string
+        name: url
+        label: Url
+      - type: string
+        name: level
+        label: Level
+      - type: list
+        name: notes
+        label: Notes
+        items:
+          type: object
+          fields:
+            - type: string
+              name: content
+              label: Content
+      - type: list
+        name: references
+        label: References
+        items:
+          type: object
+          fields:
+            - type: string
+              name: title
+              label: Title
+            - type: string
+              name: url
+              label: Url
+  object_km2x5pmlwq:
+    type: object
+    label: Object 4
+    fields:
+      - type: string
+        name: ref_id
+        label: Ref Id
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: description
+        label: Description
+      - type: string
+        name: url
+        label: Url
+      - type: string
+        name: level
+        label: Level
+      - type: list
+        name: special_cases
+        label: Special Cases
+        items:
+          type: object
+          fields:
+            - type: string
+              name: type
+              label: Type
+            - type: string
+              name: title
+              label: Title
+            - type: string
+              name: description
+              label: Description
+      - type: list
+        name: notes
+        label: Notes
+        items:
+          type: object
+          fields:
+            - type: string
+              name: content
+              label: Content
+      - type: list
+        name: references
+        label: References
+        items:
+          type: object
+          fields:
+            - type: string
+              name: title
+              label: Title
+            - type: string
+              name: url
+              label: Url
